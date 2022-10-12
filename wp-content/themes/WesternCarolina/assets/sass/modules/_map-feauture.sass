@@ -1,0 +1,61 @@
+.map-feauture
+  // padding:  0 120px
+  background-image: url('../img/texture-1.jpg')
+  background-repeat: repeat
+  position: relative
+  background-size: 100%
+  padding-bottom: 30px
+  @include media-breakpoint-up(lg)
+    background-size: 800px
+  
+  &::after
+    content: ""
+    display: block
+    background-image: url(../img/texture-torn-down.png)
+    background-size: 100%
+    width: 100%
+    position: absolute
+    height: 80px
+    background-repeat: repeat-x
+    bottom: -75px
+    z-index: 10
+    @include media-breakpoint-up(lg)
+      bottom: -110px
+      height: 110px
+  .container
+    @include media-breakpoint-up(lg)
+      padding-left: 0
+      display: grid
+      gap: 30px
+      align-items: center
+      grid-template-columns: repeat(12, 1fr)
+      figure
+        grid-column: 1 / span 8
+        grid-row: 1
+      .content
+        grid-column: 8 / span 4
+        grid-row: 1
+        > h3
+          color: $type_color
+          &::after
+            content: ""
+            display: block
+            height: 10px
+            width: 80px
+            background: $tertiary
+            margin-top: 20px
+        .stats
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          margin: 30px 0
+          gap: 30px
+          .stat
+            p
+              // font-family: 
+            h6
+              color: $type_color
+              margin-top: 15px
+              margin-bottom: 2px
+            h3
+              color: $primary
+              font-size: 4rem

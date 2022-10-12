@@ -1,0 +1,56 @@
+.hero
+  background-image: url('../img/hero-purple-texture.jpg')
+  background-repeat: repeat
+  position: relative
+
+  @include media-breakpoint-up(lg)
+    padding: 40px 0 0
+  @include media-breakpoint-up(xl)
+    padding: 40px 0 60px
+  .container
+    display: grid
+    padding-right: 0
+    gap: 30px
+    padding-bottom: 60px
+    .button
+      display: block
+
+    @include media-breakpoint-up(lg)
+      // margin-top: -180px
+      grid-template-columns: repeat(12, 1fr)
+
+      align-items: center
+      .button
+        display: inline-block
+    figure
+      grid-row: 1
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 30px
+      z-index: 99
+      @include media-breakpoint-up(lg)
+        grid-column: 6 / span 7
+        // transform: translateY(220px)
+        margin-bottom: -190px
+      @include media-breakpoint-up(xl)
+        grid-column: 5 / span 8
+        margin-bottom: -280px
+       
+
+    .content
+      grid-row: 2
+      padding-right: 30px
+      @include media-breakpoint-up(lg)
+        grid-column: 1/span 6
+        grid-row: 1
+        padding-right: 0
+
+      @include media-breakpoint-up(xl)
+        grid-column: 1 / span 5
+        // max-width: 480px
+        padding: 0
+      p
+        @include media-breakpoint-up(lg)
+          font-size: 2.4rem
+      h1,p
+        color: #fff

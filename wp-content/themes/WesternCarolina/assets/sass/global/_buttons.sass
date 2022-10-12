@@ -1,0 +1,42 @@
+.button, input[type='submit']
+  padding: 15px 30px
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  text-decoration: none
+  background-color: $primary
+  color: #fff
+  // letter-spacing: 1px
+  display: inline-block
+  line-height: 1
+  position: relative
+  font-weight: 900
+  text-transform: uppercase
+  font-family: $sans-serif-font
+  border: none
+  transition: .5s ease all
+  letter-spacing: 1px
+  @include prefixer('box-shadow', ' 5px 5px 0px 0' + darken($primary, 10))
+  &.secondary
+    @include prefixer('box-shadow', ' 5px 5px 0px 0' + darken($secondary, 15))
+    background: $secondary
+    color: #fff
+    &:hover
+      @include prefixer('box-shadow', ' 0px 0px 0px 0' + darken($primary, 10))
+  &:hover
+    @include prefixer('transition', '.25s ease all')
+    @include prefixer('transform', 'translate(2px, 2px)')
+    @include prefixer('box-shadow', ' 0px 0px 0px 0' + darken($primary, 10))
+  &.white
+    background-color: #fff
+    color: $primary
+    font-weight: 700
+    text-transform: uppercase
+  &.outline
+    color: $primary
+    border: solid 1px $primary
+    background: #fff
+    &.white
+      border: solid 1px #fff
+      color: #fff
+      background: transparent

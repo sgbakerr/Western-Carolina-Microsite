@@ -1,0 +1,50 @@
+.fifty-blocks
+  background-image: url('../img/fifty-texture.jpg')
+  background-size: 100%
+  background-repeat: repeat-y
+  .block
+    padding-top: 60px
+    padding-bottom: 60px
+    position: relative
+    > div
+      padding: 30px
+      .button
+        display: inline-block
+        margin-top: 20px
+      @include media-breakpoint-up(lg)
+        padding: 0
+    figure
+      img
+        width: 100%
+    @include media-breakpoint-up(lg)
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      align-items: center
+      &:last-child
+        &::after
+          content: none
+      &::after
+        content: ""
+        position: absolute
+        width: 220px
+        left: 0
+        right: 0
+        margin: 0 auto
+        height: 1px
+        bottom: 0
+        border-bottom: solid 1px $secondary
+    @include make-container
+    @include media-breakpoint-up(lg)
+      padding-top: 120px
+      padding-bottom: 120px
+      &.even
+        > figure
+          grid-row: 1
+          grid-column: 7 / span 6
+        > div
+          grid-row: 1
+          grid-column: 2 / span 4
+      > figure
+        grid-column: 1/ span 6
+      > div
+        grid-column: 8 / span 4

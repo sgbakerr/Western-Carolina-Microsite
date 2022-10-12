@@ -1,0 +1,134 @@
+.slider-wrap
+  position: relative
+  background-image: url('../img/slider-bg.jpg')
+  background-size: cover
+  margin-top: 20px
+  padding-top: 80px
+  padding-bottom: 120px
+  &::after
+    content: ''
+    width: 100%
+    background-size: 100%
+    background-image: url('../img/trail.png')
+    background-repeat: no-repeat
+    display: block
+    height: 730px
+    position: absolute
+    z-index: 10
+    right: 0
+    left: 0
+    bottom: 0
+    margin: auto
+  .slider
+    display: flex
+    align-items: center
+    position: relative
+    z-index: 12
+  h3
+    color: #fff
+    text-align: center
+    max-width: 380px
+    margin: 0 auto 30px
+    // letter-spacing: 1px
+  .slide-button
+    position: absolute
+    top: 0
+    bottom: 0
+    background-color: $secondary
+    height: 100px
+    width: 70px
+    font-size: 0
+    border: none
+    margin: auto 0
+    z-index: 20
+    @include prefixer('transition', 'ease all .25s')
+    &:hover
+      opacity: .8
+      @include prefixer('transition', 'ease all .25s')
+
+    &.next-button
+      right: 0
+    &.previous-button
+      left: 0
+  .slide
+    opacity: .25
+    padding: 0 15px
+    position: relative
+    .play
+      opacity: 0
+    &.center
+      opacity: 1
+      width: calc(7%) !important
+      @include prefixer('transition', 'ease all .25s')
+      position: relative
+      .play
+        width: 80px
+        background-size: 100%
+        background-repeat: no-repeat
+        background-image: url('../img/play.png')
+        background-color: transparent
+        font-size: 0
+        border: none
+        display: block
+        height: 81px
+        position: absolute
+        z-index: 99
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        margin: auto
+        opacity: 1
+        &:hover
+          opacity: .8
+        @include prefixer('transition', 'ease all .25s')
+
+    img
+      width: 100%
+.modal
+  opacity: 0
+  @include prefixer('transform', 'translateY(-100vh)')
+  @include prefixer('transition', 'ease all .5s')
+  position: fixed
+  z-index: 9999
+  padding: 120px
+  width: 100%
+  top: 0
+  right: 0
+  left: 0
+  height: 100vh
+  background: $primary
+  .close
+    width: 40px
+    height: 40px
+    background: none
+    position: absolute
+    right: 100px
+    top: 80px
+    font-size: 0
+    // padding: 10px
+    border: none
+    &::after
+      content: ""
+      width: 30px
+      background-size: 100%
+      background-repeat: no-repeat
+      background-image: url('../img/close.png')
+      background-color: transparent
+      font-size: 0
+      border: none
+      display: block
+      height: 30px
+
+
+  
+  video
+    display: block
+    width: 80%
+    margin: auto
+  &.active
+    opacity: 1
+    @include prefixer('transform', 'translateY(0)')
+    @include prefixer('transition', 'ease all .5s')
+    // display: block
+    top: 0

@@ -1,0 +1,60 @@
+.site-footer
+  background-image: url(../img/slider-bg.jpg)
+  background-size: cover
+  padding: 80px 0
+  .container
+    .social-nav
+      ul
+        display: flex
+        justify-content: center
+        margin-top: 60px
+        align-items: center
+        li
+          padding: 0 20px
+          display: flex
+          align-items: center
+          &.twitter
+            a
+              &:before
+                width: 30px
+                height: 25px
+                background-image: url('../img/twitter.svg')
+          &.facebook
+            a
+              &:before
+                width: 30px
+                height: 30px
+                background-image: url('../img/facebook.svg')
+          &.instagram
+            a
+              &:before
+                width: 30px
+                height: 31px
+                background-image: url('../img/instagram.svg')
+          &.tiktok
+            a
+              &:before
+                width: 30px
+                height: 35px
+                background-image: url('../img/tiktok.svg')
+          a
+            font-size: 0
+            &::before
+              content: ""
+              display: block
+
+              background-size: 100%
+              background-repeat: no-repeat
+    .footer-info
+      text-align: center
+      .footer-logo
+        max-width: 200px
+        margin: 0 auto 30px
+        path
+          fill: #fff
+
+      p
+        color: #fff
+        margin-bottom: 5px
+  @include media-breakpoint-up(lg)
+    padding-top: 240px

@@ -1,0 +1,46 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Textual form controls
+//
+label
+  font-size: $default-font-size
+  text-transform: uppercase
+  font-weight: 700
+  margin-bottom: 20px
+  display: block
+  &.validate-red
+    color: red
+    font-weight: 700
+    input
+      border: solid 2px red
+input[type="text"], input[type="email"], input[type="tel"], textarea
+  display: block
+  width: 100%
+  padding: 10px
+  font-size: $default-font-size
+  line-height: 1.1
+  color: $type_color
+  background-color: #fff
+  background-clip: padding-box
+  border: solid 1px #AAAAAA
+  background: #F5F5F5
+  border-radius: 0
+
+select
+  padding: 10px
+  background: #ddd
+  background: white
+  border: 1px solid #ddd
+  border-radius: 0
+  outline: none
+  color: $primary
+  line-height: 1.1
+  position: relative
+  width: 100%
+  cursor: pointer
+  cursor: s-resize
+  // background-image: url('../img/select-bg.svg')
+  background-size: 48px
+  background-repeat: no-repeat
+  background-position: right

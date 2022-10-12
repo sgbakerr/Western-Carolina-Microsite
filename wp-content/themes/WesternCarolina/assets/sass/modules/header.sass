@@ -1,0 +1,112 @@
+.site-header
+  padding-top: 20px
+  padding-bottom: 0px
+  background-color: $primary
+  position: relative
+  z-index: 9
+  background-image: url('../img/hero-purple-texture.jpg') 
+  .container
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @include media-breakpoint-up(lg)
+      display: grid
+      gap: 30px
+      grid-template-columns: repeat(12, 1fr)
+      align-items: center
+    nav
+      flex: 0 0 100%
+      display: none
+      padding-top: 20px
+      ul.main-nav
+        margin-bottom: 15px
+        border-bottom: solid 1px #fff
+        padding-bottom: 15px
+        @include media-breakpoint-up(lg)
+          margin-bottom: 0
+          padding-bottom: 0
+          border: none
+      &.active
+        display: block
+        padding-bottom: 30px
+
+      @include media-breakpoint-up(lg)
+        grid-row: 1
+        grid-column: 3 / span 10
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &.active
+          display: flex
+          padding: 0
+      ul
+        @include media-breakpoint-up(lg)
+          display: flex
+          align-items: center
+        li
+          padding: 10px 0
+          @include media-breakpoint-up(lg)
+            padding: 0 15px
+          a
+            text-transform: uppercase
+            font-weight: 900
+            color: #fff
+            letter-spacing: 1px
+            font-size: 1.6rem
+    .hamburger
+      grid-row: 1
+      grid-column: 2
+      flex: 0 0 80px
+      margin: 0
+      background: none
+      display: block
+      border: none
+      text-transform: uppercase
+      position: relative
+      font-size: 0
+      @include prefixer('transition', 'ease all .25s')
+      padding: 15px 20px
+      &.active
+        &::before
+          @include prefixer('transform', 'rotate(45deg)')
+          @include prefixer('transition', 'ease all .25s')
+        &::after
+          @include prefixer('transform', 'rotate(-45deg)')
+          @include prefixer('box-shadow', 'none')
+          @include prefixer('transition', 'ease all .25s')
+      &::before
+        content: ''
+        position: absolute
+        width: 25px
+        height: 2px
+        top: 0
+        bottom: 0
+        right: 0
+        margin: auto
+        background: #fff
+        @include prefixer('transition', 'ease all .25s')
+      &::after
+        content: ""
+        position: absolute
+        width: 25px
+        height: 2px
+        background: #fff
+        @include prefixer('transition', 'ease all .25s')
+        top: 0
+        bottom: 0
+        right: 0
+        margin: auto
+        @include prefixer('box-shadow', ' 0 -8px 0 #fff, 0 8px 0 #fff')
+      @include media-breakpoint-up(lg)
+        display: none
+    .site-logo
+      display: block
+      flex: 0 0 160px
+      @include media-breakpoint-up(lg)
+        grid-column: 1/ span 2
+      svg
+        path
+          fill: #fff
+// .hamburger
+ 
