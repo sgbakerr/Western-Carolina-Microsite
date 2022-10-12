@@ -28,7 +28,8 @@ $stats = $field['stats'];
       endforeach; ?>
       </div>
       <?php if($button) { ?> 
-        <a class="button" href="<?php echo $button['url'] ?>"><?php echo $button['title'] ?></a><? } ?>
+        <a class="button" href="<?php echo $button['url'] ?>"><?php echo $button['title'] ?></a><?php 
+      } ?>
     </div>
   </div>
 </div>
