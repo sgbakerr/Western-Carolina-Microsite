@@ -12,23 +12,23 @@ $stats = $field['stats'];
 <div class="map-feauture">
   <div class="container">
     <figure>
-      <img src="<?= $map['url'] ?>" />
+      <img src="<?php echo $map['url'] ?>" />
     </figure>
     <div class="content">
-      <h3 class="display black"><?= $header ?></h3>
+      <h3 class="display black"><?php echo $header ?></h3>
       <div class="stats">
-        <? 
+      <?php
       foreach($stats as $stat) : ?>
         <div class="stat">
-          <h3 class="sans-serif"><?= $stat['header'] ?></h3>
-          <h6 class="sans-serif"><?= $stat['subheader'] ?></h6>
-          <p><?= $stat['copy'] ?></p>
+          <h3 class="sans-serif">?php echo $stat['header'] ?></h3>
+          <h6 class="sans-serif"><?php echo $stat['subheader'] ?></h6>
+          <p><?php echo $stat['copy'] ?></p>
         </div>
         <?
       endforeach; ?>
       </div>
-      <? if($button) { ?> 
-        <a class="button" href="<?= $button['url'] ?>"><?= $button['title'] ?></a><? } ?>
+      <?php if($button) { ?> 
+        <a class="button" href="<?php echo $button['url'] ?>"><?php echo $button['title'] ?></a><? } ?>
     </div>
   </div>
 </div>

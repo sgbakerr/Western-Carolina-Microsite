@@ -7,7 +7,7 @@ $copy = $field['copy'];
 $images = $field['images']; ?>
 <div class="collage">
   <div class="card-row">
-  <?= get_template_part('modules/module-parts/card') ?>
+  <?php echo get_template_part('modules/module-parts/card') ?>
   </div>
   <div class="images">
     <?
@@ -21,9 +21,9 @@ $images = $field['images']; ?>
   if($count === 1) $size = 'collage_med';
   if($count === 2) $size = 'collage_sm';
   if($count <= 2) { ?>
-    <figure class="image-<?= $count ?>">
+    <figure class="image-<?php echo $count ?>">
       <!-- <pre></pre> -->
-      <img  src="<?= $image['image']['sizes'][$size]?>" alt="<?= $alt ?>"/>
+      <img  src="<?php echo $image['image']['sizes'][$size]?>" alt="<?php echo $alt ?>"/>
     </figure><?
   }
   $count++;

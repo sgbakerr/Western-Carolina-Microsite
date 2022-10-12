@@ -146,7 +146,7 @@ $removed_args = array( 'action', 'customlink-tab', 'edit-menu-item', 'menu-item'
 <div id="plugin-slug-div">
   <div id="tabs-panel-plugin-slug-all" class="tabs-panel tabs-panel-active">
   <ul id="plugin-slug-checklist-pop" class="categorychecklist form-no-clear" >
-    <?php echo walk_nav_menu_tree( array_map( 'wp_setup_nav_menu_item', $menu_object ), 0, (object) array( 'walker' => $walker ) ); ?>
+    <?php echo  walk_nav_menu_tree( array_map( 'wp_setup_nav_menu_item', $menu_object ), 0, (object) array( 'walker' => $walker ) ); ?>
   </ul>
   <p class="button-controls">
     <span class="add-to-menu">

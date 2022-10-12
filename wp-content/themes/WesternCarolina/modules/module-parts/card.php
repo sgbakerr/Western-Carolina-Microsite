@@ -4,9 +4,9 @@ $cardColor,
 $header, 
 $copy ?>
 
-<div class="card <?= $cardColor ?>"><?
+<div class="card <?php echo $cardColor ?>"><?
   if($header) { ?>
-    <h2 class="serif"><?= $header ?></h2><? 
+    <h2 class="serif"><?php echo $header ?></h2><? 
   }
   if($copy) { 
     echo $copy;

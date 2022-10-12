@@ -5,10 +5,10 @@ global $field;
 ?>
 <div class="form-banner">
   <figure>
-    <img src="<?= $field['image']['sizes']['form_banner'] ?>" />
+    <img src="<?php echo $field['image']['sizes']['form_banner'] ?>" />
   </figure>
   <div class="card form">
-    <?= $field['form'] ?>
+    <?php echo $field['form'] ?>
   </div>
 
 </div>

@@ -24,7 +24,7 @@ get_header(); ?>
         </section>
     </article><!-- #post-<?php the_ID(); ?> -->
 <?php endwhile; ?>
-<?php echo my_post_nav_links(); ?>
+<?php echo  my_post_nav_links(); ?>
 <?php get_sidebar(); ?>
 
 

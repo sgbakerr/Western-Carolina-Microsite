@@ -67,8 +67,8 @@
             d="M417.28,166.04l-5.38-11.21h3.67l3.57,7.69,3.52-7.69h3.41l-5.3,11.18v7.34h-3.49v-7.32Z" />
         </g>
       </svg>
-      <p class="copyright">&copy; <?php the_date('Y');  ?> <?= get_bloginfo('site_title') ?> </p>
-      <p class="footer-address"> <?= get_field('footer_address', 'option') ?></p>
+      <p class="copyright">&copy; <?php the_date('Y');  ?> <?php echo get_bloginfo('site_title') ?> </p>
+      <p class="footer-address"> <?php echo get_field('footer_address', 'option') ?></p>
     </div>
     <nav class="social-nav">
       <ul>

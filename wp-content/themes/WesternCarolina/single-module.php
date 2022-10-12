@@ -41,7 +41,7 @@ if( $term) {
 	// Add final part to template string
 	$term_str = $term_str . "/template"; ?>
 
-	<section id="<?php echo $module['module']->post_name; ?>" class="<?php echo $term_class; ?> <?php echo $module["module_fields"]["background_color"] ?>" >
+	<section id="<?php echo  $module['module']->post_name; ?>" class="<?php echo  $term_class; ?> <?php echo  $module["module_fields"]["background_color"] ?>" >
 				
 		<?php // Get the module template
 		get_template_part( "templates/" . $module['module']->post_type . $term_str); ?>

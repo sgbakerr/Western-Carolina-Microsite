@@ -23,15 +23,15 @@ global $module;
 <!--<![endif]-->
 
 <head>
-  <title><?php $p = get_post(); echo $p->post_title; ?> | <?php echo bloginfo( "name"); ?> |
-    <?php echo get_the_excerpt($post->ID); ?></title>
+  <title><?php $p = get_post(); echo $p->post_title; ?> | <?php echo  bloginfo( "name"); ?> |
+    <?php echo  get_the_excerpt($post->ID); ?></title>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <!-- force IE out of compatability mode for any version -->
   <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
   <!-- force mobile view 100% -->
   <meta name="viewport" content="width=device-width">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.png" rel="shortcut icon" />
+  <link href="<?php echo  get_template_directory_uri(); ?>/assets/img/favicon.png" rel="shortcut icon" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <?php wp_head(); ?>
 </head>
@@ -39,7 +39,7 @@ global $module;
 <body <?php body_class(); ?>>
   <header role="banner" class="site-header">
     <div class="container">
-      <a href="<?php echo get_bloginfo('url'); ?>" class="site-logo">
+      <a href="<?php echo  get_bloginfo('url'); ?>" class="site-logo">
         <svg  preserveAspectRatio="xMinYMin meet" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436.41 178.16">
 
           <g>

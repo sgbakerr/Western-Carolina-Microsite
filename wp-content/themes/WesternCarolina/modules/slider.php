@@ -7,7 +7,7 @@ $slides = $field['testimonial_slides'];
 // var_dump();
 ?>
 <div class="slider-wrap">
-  <h3 class="display"><?= $field['section_header']; ?></h3>
+  <h3 class="display"><?php echo $field['section_header']; ?></h3>
   <button class="previous-button slide-button">
     <svg preserveAspectRatio="xMinYMin meet" width="28" height="46" viewBox="0 0 28 46" fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -16,18 +16,18 @@ $slides = $field['testimonial_slides'];
     Previous
   </button>
   <div class="slider">
-    <? 
+  <?php
   $count = 0;
   foreach($slides as $slide) : 
     $alt = $slide['image']['alt'];
     if($slide['image']['alt'] === '') {
       $alt = $slide['image']['filename'];
     }?>
-    <div class="slide" data-modal="modal-<?= $count ?>">
+    <div class="slide" data-modal="modal-<?php echo $count ?>">
       <button class="play">Play</button>
-      <img src="<?= $slide['image']['sizes']['slide_image'] ?>">
+      <img src="<?php echo $slide['image']['sizes']['slide_image'] ?>">
     </div>
-    <?
+    <?php
     $count++;
   endforeach; ?>
   </div>
@@ -41,14 +41,14 @@ $slides = $field['testimonial_slides'];
 </div>
 
 
-  <? 
+<?php
   $count = 0;
   foreach($slides as $modal) : ?>
-  <div class="modal" id="modal-<?= $count ?>">
+  <div class="modal" id="modal-<?php echo $count ?>">
     <button class="close">Close</button>
     <video controls>
       <? foreach($modal['video_urls'] as $vid) : ?>
-        <source src="<?= $vid['url'] ?>" type="video/<?= $vid['file_type'] ?>">
+        <source src="<?php echo $vid['url'] ?>" type="video/<?php echo $vid['file_type'] ?>">
       <?
       endforeach;?>
     </video>

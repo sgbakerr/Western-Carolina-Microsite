@@ -1,4 +1,4 @@
-<?
+<?php
 // Collage Module
 global $field, $cardColor, $header, $copy;
 $cardColor = 'white';
@@ -15,9 +15,9 @@ $alt = $image['alt'];
 ?>
 <div class="image-banner">
   <div class="card-row">
-    <?= get_template_part('modules/module-parts/card') ?>
+    <?php echo get_template_part('modules/module-parts/card') ?>
   </div>
   <figure class="image">
-    <img src="<?= $image['sizes']['image_banner']?>" />
+    <img src="<?php echo $image['sizes']['image_banner']?>" />
   </figure>
 </div>

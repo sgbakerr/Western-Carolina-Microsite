@@ -12,18 +12,18 @@ $image = $field['hero']['image'];
   <div class="container">
     <div class="content">
       <? if($header) { ?>
-        <h1 class="display"><?= $header ?></h1>
+        <h1 class="display"><?php echo $header ?></h1>
       <? } ?>
       <? if($copy) { ?>
-        <p class="serif"><?= $copy ?></p>
+        <p class="serif"><?php echo $copy ?></p>
       <? } ?>
       <? if($link) { ?>
-        <a class="button secondary"  href="<?= $link['url'] ?>"> <?= $link['title'] ?></a>
+        <a class="button secondary"  href="<?php echo $link['url'] ?>"> <?php echo $link['title'] ?></a>
       <? } ?>
 
     </div>
     <figure>
-      <img src="<?= $image['url'] ?>" />
+      <img src="<?php echo $image['url'] ?>" />
     </figure>
   </div>
 

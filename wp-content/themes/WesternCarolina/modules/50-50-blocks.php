@@ -1,4 +1,4 @@
-<?
+<?php
 // Collage Module
 global $field;
 // var_dump();
@@ -20,17 +20,17 @@ if($count % 2 === 0) {
 }
 ?>
 
-<div class="block <?= $class ?>">
+<div class="block <?php echo $class ?>">
   
   <figure>
-    <img src="<?= $block['image']['sizes']['fifty'] ?>" />
+    <img src="<?php echo $block['image']['sizes']['fifty'] ?>" />
   </figure>
   <div>
-    <h3 class="display"><?= $block['header']?></h3>
-    <p><?= $block['copy']; ?></p>
-    <?  if(($block['button'])){ ?> 
-    <a class="button " href="<?= $block['button']['url'] ?>"><?=  $block['button']['title'] ?></a>
-    <? }?>
+    <h3 class="display"><?php echo $block['header']?></h3>
+    <p><?php echo $block['copy']; ?></p>
+    <?php  if(($block['button'])){ ?> 
+    <a class="button " href="<?php echo $block['button']['url'] ?>">?php echo  $block['button']['title'] ?></a>
+    <?php }?>
     
   </div> 
 
