@@ -26,16 +26,15 @@ if (function_exists('get_fields')) {
           $module_id = 'module-' . $moduleCount; 
           $module_slug = str_replace('_', '-', $field['acf_fc_layout']);
           ?>
-          <div class="acf_module" id="<?= $module_id ?>">
-            <?= get_template_part('modules/' . $module_slug); ?>
+          <div class="acf_module" id="<?php echo $module_id; ?>">
+            <?php echo get_template_part('modules/' . $module_slug); ?>
           </div>
-
+            
           <?
           $moduleCount++;
           endforeach;
       }
     endwhile;
-} else {
-  echo '<p>Please activate the plugin Advanced Custom Fields Pro</p>';
 }
-get_footer(); ?>
+?>
+<?php get_footer(); ?>
