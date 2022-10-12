@@ -20,7 +20,7 @@ $stats = $field['stats'];
       <?php
       foreach($stats as $stat) : ?>
         <div class="stat">
-          <h3 class="sans-serif">?php echo $stat['header'] ?></h3>
+          <h3 class="sans-serif"><?php echo $stat['header'] ?></h3>
           <h6 class="sans-serif"><?php echo $stat['subheader'] ?></h6>
           <p><?php echo $stat['copy'] ?></p>
         </div>
