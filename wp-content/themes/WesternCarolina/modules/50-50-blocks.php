@@ -29,7 +29,7 @@ if($count % 2 === 0) {
     <h3 class="display"><?php echo $block['header']?></h3>
     <p><?php echo $block['copy']; ?></p>
     <?php  if(($block['button'])){ ?> 
-    <a class="button " href="<?php echo $block['button']['url'] ?>">?php echo  $block['button']['title'] ?></a>
+    <a class="button " href="<?php echo $block['button']['url'] ?>"><?php echo  $block['button']['title'] ?></a>
     <?php }?>
     
   </div> 
