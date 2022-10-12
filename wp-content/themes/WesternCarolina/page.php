@@ -38,4 +38,4 @@ if (function_exists('get_fields')) {
 } else {
   echo '<p>Please activate the plugin Advanced Custom Fields Pro</p>';
 }
-get_footer();
+get_footer(); ?>
