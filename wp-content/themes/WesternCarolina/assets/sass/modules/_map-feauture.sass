@@ -20,7 +20,7 @@
     bottom: -75px
     z-index: 10
     @include media-breakpoint-up(lg)
-      bottom: -100px
+      // bottom: -100px
       height: 110px
   .container
     @include media-breakpoint-up(lg)
@@ -32,10 +32,14 @@
       figure
         grid-column: 1 / span 8
         grid-row: 1
+        img
+          height: 800px
+          object-fit: cover
       .content
         grid-column: 8 / span 5
         grid-row: 1
         padding: 60px
+        margin-top: 220px
         background: rgba(255,255,255, .9)
         > h3
           color: $type_color
