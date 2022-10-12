@@ -20,20 +20,18 @@ if (function_exists('get_fields')) {
     $fields = $module['page_fields']['modules']; 
 
     while (have_posts()) : the_post();
-      if (!empty($fields)) {
-          $moduleCount = 1;
-          foreach ($fields as $field) :
-          $module_id = 'module-' . $moduleCount; 
-          $module_slug = str_replace('_', '-', $field['acf_fc_layout']);
-          ?>
-          <div class="acf_module" id="<?php echo $module_id; ?>">
-            <?php echo get_template_part('modules/' . $module_slug); ?>
-          </div>
-            
-          <?
-          $moduleCount++;
-          endforeach;
-      }
+        
+      $moduleCount = 1;
+      foreach ($fields as $field) :
+        $module_id = 'module-' . $moduleCount; 
+        $module_slug = str_replace('_', '-', $field['acf_fc_layout']); ?>
+      <div class="acf_module" id="<?php echo $module_id; ?>">
+        <?php echo get_template_part('modules/' . $module_slug); ?>
+      </div>
+
+      <?php  
+      $moduleCount++;
+      endforeach;
     endwhile;
 }
 ?>
