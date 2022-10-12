@@ -11,15 +11,15 @@ $image = $field['hero']['image'];
 <div class="hero">
   <div class="container">
     <div class="content">
-      <? if($header) { ?>
+      <?php if($header) { ?>
         <h1 class="display"><?php echo $header ?></h1>
-      <? } ?>
-      <? if($copy) { ?>
+      <?php } ?>
+      <?php if($copy) { ?>
         <p class="serif"><?php echo $copy ?></p>
-      <? } ?>
-      <? if($link) { ?>
+      <?php } ?>
+      <?php if($link) { ?>
         <a class="button secondary"  href="<?php echo $link['url'] ?>"> <?php echo $link['title'] ?></a>
-      <? } ?>
+      <?php } ?>
 
     </div>
     <figure>

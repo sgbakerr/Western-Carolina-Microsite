@@ -1,4 +1,4 @@
-<?
+<?php
 // Collage Module
 global $field;
 

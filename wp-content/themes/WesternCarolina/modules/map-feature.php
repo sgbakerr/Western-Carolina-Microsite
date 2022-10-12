@@ -24,7 +24,7 @@ $stats = $field['stats'];
           <h6 class="sans-serif"><?php echo $stat['subheader'] ?></h6>
           <p><?php echo $stat['copy'] ?></p>
         </div>
-        <?
+        <?php
       endforeach; ?>
       </div>
       <?php if($button) { ?> 

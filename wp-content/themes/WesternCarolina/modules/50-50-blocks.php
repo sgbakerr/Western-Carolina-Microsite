@@ -9,7 +9,7 @@ global $field;
 // $buttonColor = 
 $blocks = $field['5050_blocks'];
 ?>
-<div class="fifty-blocks"><? 
+<div class="fifty-blocks"><?php 
 $count = 0;
 foreach($blocks as $block) : 
 // var_dump();
@@ -34,7 +34,7 @@ if($count % 2 === 0) {
     
   </div> 
 
-</div><?
+</div><?php
 $count++;
 endforeach; ?>
 

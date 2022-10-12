@@ -1,4 +1,4 @@
-<?
+<?php
 // Collage Module
 global $field, $cardColor, $header, $copy;
 $cardColor = 'purple';
@@ -10,7 +10,7 @@ $images = $field['images']; ?>
   <?php echo get_template_part('modules/module-parts/card') ?>
   </div>
   <div class="images">
-    <?
+    <?php
   $count = 0;
   foreach($images as $image) : 
   $alt = $image['image']['alt'];
@@ -24,7 +24,7 @@ $images = $field['images']; ?>
     <figure class="image-<?php echo $count ?>">
       <!-- <pre></pre> -->
       <img  src="<?php echo $image['image']['sizes'][$size]?>" alt="<?php echo $alt ?>"/>
-    </figure><?
+    </figure><?php
   }
   $count++;
   endforeach; ?>
