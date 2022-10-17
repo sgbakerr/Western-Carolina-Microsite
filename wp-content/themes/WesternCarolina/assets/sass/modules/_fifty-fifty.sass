@@ -5,20 +5,22 @@
   .block
     padding-top: 60px
     padding-bottom: 60px
+    
     position: relative
     > div
       padding: 30px
+      
       .button
         display: inline-block
         margin-top: 20px
-      @include media-breakpoint-up(lg)
-        padding: 0
+
     figure
       img
         width: 100%
     @include media-breakpoint-up(lg)
       display: grid
       grid-template-columns: repeat(12, 1fr)
+      gap: 30px
       align-items: center
       &:last-child
         &::after

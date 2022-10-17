@@ -34,7 +34,7 @@ task('build', function (cb) {
   // body omitted
   watch([
     'assets/sass/*.sass',
-    'assets/sass/*/*.sass',
+    'assets/sass/**/*.sass',
     'assets/js/**/*.js'],
     series(clean, parallel(javascript, sassCompile)));
   cb();

@@ -5,9 +5,10 @@
   position: relative
   background-size: 100%
   padding-bottom: 30px
+  padding-top: 30px
   @include media-breakpoint-up(lg)
     background-size: 800px
-
+    padding-bottom: 0
   &::after
     content: ""
     display: block
@@ -23,6 +24,35 @@
       // bottom: -100px
       height: 110px
   .container
+    .content
+      z-index: 12
+      position: relative
+
+      > h3
+        color: $type_color
+        &::after
+          content: ""
+          display: block
+          height: 10px
+          width: 80px
+          background: $tertiary
+          margin-top: 20px
+
+      .stats
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        margin: 30px 0
+        gap: 30px
+        .stat
+          p
+            // font-family: 
+          h6
+            color: $type_color
+            margin-top: 15px
+            margin-bottom: 2px
+          h3
+            color: $primary
+            font-size: 4rem
     @include media-breakpoint-up(lg)
       padding-left: 0
       display: grid
@@ -30,38 +60,15 @@
       align-items: center
       grid-template-columns: repeat(12, 1fr)
       figure
-        grid-column: 1 / span 8
+        grid-column: 1 / span 9
         grid-row: 1
+        overflow: hidden
         img
-          height: 800px
-          object-fit: cover
+          width: 100%
+          margin-left: -80px
       .content
-        grid-column: 8 / span 5
+        grid-column: 9 / span 4
         grid-row: 1
-        padding: 60px
-        margin-top: 220px
-        background: rgba(255,255,255, .9)
-        > h3
-          color: $type_color
-          &::after
-            content: ""
-            display: block
-            height: 10px
-            width: 80px
-            background: $tertiary
-            margin-top: 20px
-        .stats
-          display: grid
-          grid-template-columns: repeat(2, 1fr)
-          margin: 30px 0
-          gap: 30px
-          .stat
-            p
-              // font-family: 
-            h6
-              color: $type_color
-              margin-top: 15px
-              margin-bottom: 2px
-            h3
-              color: $primary
-              font-size: 4rem
+        z-index: 11
+        // margin-top: 220px
+        padding-bottom: 30px

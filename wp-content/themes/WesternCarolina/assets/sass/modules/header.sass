@@ -1,10 +1,11 @@
 .site-header
   padding-top: 20px
-  padding-bottom: 0px
-  background-color: $primary
+  padding-bottom: 20px
+  // background-color: $primary
+  // ba
   position: relative
   z-index: 9
-  background-image: url('../img/hero-purple-texture.jpg') 
+  // background-image: url('../img/hero-purple-texture.jpg') 
   .container
 
     display: flex
@@ -18,10 +19,10 @@
     nav
       flex: 0 0 100%
       display: none
-      padding-top: 20px
+      // padding-top: 20px
       ul.main-nav
         margin-bottom: 15px
-        border-bottom: solid 1px #fff
+        border-bottom: solid 1px $primary
         padding-bottom: 15px
         @include media-breakpoint-up(lg)
           margin-bottom: 0
@@ -51,7 +52,7 @@
           a
             text-transform: uppercase
             font-weight: 900
-            color: #fff
+            color:  $primary
             letter-spacing: 1px
             font-size: 1.6rem
     .hamburger
@@ -84,20 +85,20 @@
         bottom: 0
         right: 0
         margin: auto
-        background: #fff
+        background: $primary
         @include prefixer('transition', 'ease all .25s')
       &::after
         content: ""
         position: absolute
         width: 25px
         height: 2px
-        background: #fff
+        background:  $primary
         @include prefixer('transition', 'ease all .25s')
         top: 0
         bottom: 0
         right: 0
         margin: auto
-        @include prefixer('box-shadow', ' 0 -8px 0 #fff, 0 8px 0 #fff')
+        @include prefixer('box-shadow', ' 0 -8px 0' + $primary + ',' + '0 8px 0' + $primary)
       @include media-breakpoint-up(lg)
         display: none
     .site-logo
@@ -107,6 +108,6 @@
         grid-column: 1/ span 2
       svg
         path
-          fill: #fff
+          fill:  $primary
 // .hamburger
  

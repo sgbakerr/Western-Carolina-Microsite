@@ -5,6 +5,10 @@
   margin-top: 20px
   padding-top: 80px
   padding-bottom: 120px
+  .tns-outer
+    max-width: 1580px
+    margin: 0 auto
+
   &::after
     content: ''
     width: 100%
@@ -24,6 +28,7 @@
     align-items: center
     position: relative
     z-index: 12
+
   h3
     color: #fff
     text-align: center
@@ -85,50 +90,3 @@
 
     img
       width: 100%
-.modal
-  opacity: 0
-  @include prefixer('transform', 'translateY(-100vh)')
-  @include prefixer('transition', 'ease all .5s')
-  position: fixed
-  z-index: 9999
-  padding: 120px
-  width: 100%
-  top: 0
-  right: 0
-  left: 0
-  height: 100vh
-  background: $primary
-  .close
-    width: 40px
-    height: 40px
-    background: none
-    position: absolute
-    right: 100px
-    top: 80px
-    font-size: 0
-    // padding: 10px
-    border: none
-    &::after
-      content: ""
-      width: 30px
-      background-size: 100%
-      background-repeat: no-repeat
-      background-image: url('../img/close.png')
-      background-color: transparent
-      font-size: 0
-      border: none
-      display: block
-      height: 30px
-
-
-  
-  video
-    display: block
-    width: 80%
-    margin: auto
-  &.active
-    opacity: 1
-    @include prefixer('transform', 'translateY(0)')
-    @include prefixer('transition', 'ease all .5s')
-    // display: block
-    top: 0

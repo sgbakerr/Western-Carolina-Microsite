@@ -23,7 +23,11 @@ Project.sliderInit = function () {
       "1024": {
          edgePadding: 80,
         items: 3
-      }
+      },
+      "1580": {
+        edgePadding: 0,
+       items: 3
+     }
     }
   });
 
@@ -38,11 +42,24 @@ Project.sliderInit = function () {
 
     $('.modal .close').on('click', function(){
       $(this).parent('.modal').removeClass('active')
+      // $(this).siblings('video')[0].stop();
+      // console.log();
+      var vid = $(this).siblings('video')[0];
+      vid.pause();
     });
 
     $('.slide.center .play').on('click', function(){
      $(`#${ $(this).parent('.slide').attr('data-modal')}`).addClass('active')
     });
+    
+    $('.modal-show').on('click', function() {
+      $(`#${ $(this).attr('data-modal')}`).addClass('active')
+      
+      var vid = $(`#${ $(this).attr('data-modal')}`).find('video');
+      vid[0].play();
+      
+     });
+
   
   }
 
