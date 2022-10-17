@@ -12,4 +12,3 @@
 var mobileNav = new Project.mobileNav();
 var sliderInit = new Project.sliderInit();
 var misc = new Project.miscScripts();
-var video = new Project.videoControls();

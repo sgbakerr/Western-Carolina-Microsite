@@ -16,7 +16,7 @@ $slides = $field['testimonial_slides'];
     Previous
   </button>
   <div class="slider">
-  <?php
+    <?php
   $count = 0;
   foreach($slides as $slide) : 
     $alt = $slide['image']['alt'];
@@ -44,15 +44,17 @@ $slides = $field['testimonial_slides'];
 <?php
   $count = 0;
   foreach($slides as $modal) : ?>
-  <div class="modal" id="modal-<?php echo $count ?>">
-    <button class="close">Close</button>
+<div class="modal" id="modal-<?php echo $count ?>">
+  <button class="close">Close</button>
+  <div class="video-wrap">
     <video controls>
       <?php foreach($modal['video_urls'] as $vid) : ?>
-        <source src="<?php echo $vid['url'] ?>" type="video/<?php echo $vid['file_type'] ?>">
+      <source src="<?php echo $vid['url'] ?>" type="video/<?php echo $vid['file_type'] ?>">
       <?php
       endforeach;?>
     </video>
   </div>
-  <?php
+</div>
+<?php
     $count++;
   endforeach; ?>

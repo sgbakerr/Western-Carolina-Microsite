@@ -42,22 +42,7 @@ $video = $field['video_hero']['video_link'];
     <?php
       endforeach;?>
   </video>
-  <!-- <figure class="video-controls">
-    <div class="controls" data-state="hidden">
-      <button class="play-pause play" type="button" data-state="play">Play/Pause</button>
-      <button class="stop" type="button" data-state="stop">Stop</button>
-      <div class="progress">
-        <span class="progress-bar-span"></span>
-        <progress class="progress-bar" max="" value="0" min="0">
-
-        </progress>
-      </div>
-      <button class="mute" type="button" data-state="mute">Mute/Unmute</button>
-      <button class="volinc" type="button" data-state="volup">Vol+</button>
-      <button class="voldec" type="button" data-state="voldown">Vol-</button>
-      <button class="full" type="button" data-state="go-fullscreen">Fullscreen</button>
-    </div>
-  </figure> -->
+ 
   </div>
         
       
