@@ -1,8 +1,10 @@
 .collage
- 
+  
   position: relative
   display: grid
   gap: 20px
+  max-width: 1680px
+  margin: 0 auto 30px
   @include media-breakpoint-up(lg)
     margin: 0 auto 0
     gap: 30px
@@ -35,8 +37,25 @@
     gap: 10px
     column-gap: 20px
     grid-template-columns: 1fr 1fr
+    figure
+      &.image-0
+        position: relative
+        &::before
+          content: ""
+          top: -10px
+          display: block
+          background-image: url(../img/texture-torn-down.png)
+          background-size: 100%
+          width: 100%
+          position: absolute
+          height: 80px
+          background-repeat: repeat-x
+          z-index: 10
+          @include media-breakpoint-up(md)
+            height: 140px
+            top: -40px
     @include media-breakpoint-up(lg)
-      gap: 30px
+
       grid-row: 1 / span 4
       grid-column: 1 / span 12
       grid-template-columns: repeat(12, 1fr)
