@@ -8,6 +8,12 @@
     position: relative
     > div
       padding: 30px
+      .eyebrow
+        font-size: 1.8rem
+        text-transform: uppercase
+        // font-family: 
+        color: $secondary
+        letter-spacing: 1px
       .button
         display: inline-block
         margin-top: 20px
@@ -34,8 +40,8 @@
         border-bottom: solid 1px $secondary
     @include make-container
     @include media-breakpoint-up(lg)
-      padding-top: 120px
-      padding-bottom: 120px
+      padding-top: 80px
+      padding-bottom: 80px
       &.even
         > figure
           grid-row: 1
