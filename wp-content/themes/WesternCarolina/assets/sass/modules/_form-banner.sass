@@ -7,7 +7,7 @@
     gap: 30px
     display: grid
     grid-template-columns: repeat(12, 1fr)
-    margin-bottom: -150px
+    
   &::before
     content: ""
     background-image: url('../img/texture-torn-down-secondary.png')
@@ -20,7 +20,6 @@
   figure
     @include media-breakpoint-up(lg)
 
-      min-height: 900px
       grid-row: 1
       grid-column: 1 / span 12
       overflow: hidden
@@ -31,17 +30,17 @@
       width: 100%
   .card
     z-index: 2
-    margin: -120px 10px 0
+    margin: 120px 10px 0
     position: relative
     z-index: 12
     padding: 30px
     @include media-breakpoint-up(lg)
-      margin: -180px 30px 0
+
       padding: 60px
       grid-row: 1
       grid-column: 4 / span 6
 
-      margin: 320px auto 0
+      margin: 320px auto -220px
     h2
       font-family: $serif-font
       font-weight: 700

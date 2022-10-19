@@ -10,6 +10,10 @@ Project.miscScripts = function () {
         $(styles[i]).remove()
       }
     }
+
+    $('.form-banner figure').css({
+      height: $('.form-banner').innerHeight() + 'px'
+    })
   });
 
 
