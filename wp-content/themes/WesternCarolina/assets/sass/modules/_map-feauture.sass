@@ -9,6 +9,7 @@
   @include media-breakpoint-up(lg)
     background-size: 800px
     padding-bottom: 0
+    margin-bottom: -80px
   .container
     padding: 0
     figure
@@ -21,7 +22,7 @@
         position: relative
         left: -30vw
         max-width: none
-        
+
         // position: absolute
     @include media-breakpoint-up(lg)
       padding: 0 30px
@@ -31,31 +32,49 @@
       padding: 0 30px
       @include media-breakpoint-up(lg)
         padding: 0
-      > h3
+      > h2
         color: $type_color
+        // font-size: 5rem
+        margin-bottom: 30px
         &::after
           content: ""
           display: block
           height: 10px
           width: 80px
           background: $tertiary
-          margin-top: 20px
+          margin-top: 30px
 
       .stats
         display: grid
         grid-template-columns: repeat(2, 1fr)
-        margin: 30px 0
+        margin: 0 0 60px 0
         gap: 30px
         .stat
-          p
-            // font-family: 
-          h6
+          @include media-breakpoint-up(lg)
+            position: relative
+            // padding: 20px 0
+            &:nth-child(2n+2)
+              &::after
+                content: none
+            &::after
+              content: ""
+              display: block
+              width: 1px
+              height: 100%
+              position: absolute
+              top: 0
+              right: 15px
+              background: #E5E0D6
+
+          h4
             color: $type_color
-            margin-top: 15px
-            margin-bottom: 2px
+            // margin-top: 15px
+            // margin-bottom: 2px
           h3
             color: $primary
-            font-size: 4rem
+            font-size: 6rem
+            margin-bottom: 10px
+            line-height: 1
     @include media-breakpoint-up(lg)
       padding-left: 0
       display: grid
@@ -73,7 +92,7 @@
           position: static
           max-width: 100%
       .content
-        grid-column: 9 / span 4
+        grid-column: 8 / span 5
         grid-row: 1
         z-index: 11
         // margin-top: 220px

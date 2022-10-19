@@ -15,14 +15,13 @@ $stats = $field['stats'];
       <img src="<?php echo $map['url'] ?>" />
     </figure>
     <div class="content">
-      <h3 class="display black"><?php echo $header ?></h3>
+      <h2 class="display"><?php echo $header ?></h2>
       <div class="stats">
       <?php
       foreach($stats as $stat) : ?>
         <div class="stat">
           <h3 class="sans-serif"><?php echo $stat['header'] ?></h3>
-          <h6 class="sans-serif"><?php echo $stat['subheader'] ?></h6>
-          <p><?php echo $stat['copy'] ?></p>
+          <h4 class="sans-serif"><?php echo $stat['subheader'] ?></h4>
         </div>
         <?php
       endforeach; ?>
