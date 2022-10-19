@@ -21,10 +21,10 @@ $images = $field['images']; ?>
   if($count === 1) $size = 'collage_med';
   if($count === 2) $size = 'collage_sm';
   if($count <= 2) { ?>
-    <figure class="image-<?php echo $count ?>">
+    <div class="image-<?php echo $count ?> image-contain">
       <!-- <pre></pre> -->
       <img  src="<?php echo $image['image']['sizes'][$size]?>" alt="<?php echo $alt ?>"/>
-    </figure><?php
+  </div><?php
   }
   $count++;
   endforeach; ?>

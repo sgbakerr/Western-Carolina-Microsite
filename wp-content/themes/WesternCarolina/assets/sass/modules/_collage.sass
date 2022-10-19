@@ -3,7 +3,7 @@
   display: grid
   gap: 20px
   max-width: 1720px
-  margin: 0 auto 30px
+  margin: 0 auto 15px
   @include media-breakpoint-up(lg)
     margin: 0 auto 15px
     gap: 30px
@@ -31,10 +31,9 @@
   .images
     display: grid
     grid-row: 1
-    gap: 10px
-    column-gap: 20px
     grid-template-columns: 1fr 1fr
-    figure
+    gap: 15px
+    .image-contain
       &.image-0
         position: relative
         &::before
@@ -56,15 +55,17 @@
       grid-column: 1 / span 12
       grid-template-columns: repeat(12, 1fr)
       align-items: start
-    figure
-      margin: 0
-      padding: 0
-      height: 98%
-      overflow: hidden
+    .image-contain
+      // margin: 0
+      // padding: 0
+      // height: 98%
+      // overflow: hidden
       img
         width: 100%
       &.image-0
         grid-column: 1 / span 2
+        @include media-breakpoint-up(lg)
+          height: 720px
         img
           @supports(object-fit: cover)
             @supports(object-fit: cover)
@@ -72,11 +73,14 @@
               object-fit: cover
             @include media-breakpoint-up(lg)
               @supports(object-fit: cover)
-                height: 600px
+                height: 720px
         @include media-breakpoint-up(lg)
           grid-column: 1 / span 12
       &.image-1
         grid-column: 1 / span 1
+        height: 260px
+        @include media-breakpoint-up(lg)
+          height: 460px
         img
           @supports(object-fit: cover)
             height: 260px
@@ -87,6 +91,9 @@
           grid-column: 1 / span 7
       &.image-2
         grid-column: 2 / span 1
+        height: 260px
+        @include media-breakpoint-up(lg)
+          height: 460px
         img
           @supports(object-fit: cover)
             height: 260px
