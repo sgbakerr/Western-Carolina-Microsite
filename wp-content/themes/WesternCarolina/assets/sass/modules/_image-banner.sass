@@ -43,10 +43,19 @@
   .image
     gap: 10px
     column-gap: 20px
+    overflow: hidden
+    position: relative
+    .weave
+      bottom: 0
+      position: absolute
+      z-index: 8
+      left: 0
+      bottom: 0
+
     img
       width: 100%
 
     @include media-breakpoint-up(lg)
-      
+
       grid-row: 1
       grid-column: 1 / span 12

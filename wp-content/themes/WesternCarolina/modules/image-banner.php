@@ -18,6 +18,7 @@ $alt = $image['alt'];
     <?php echo get_template_part('modules/module-parts/card') ?>
   </div>
   <figure class="image">
-    <img src="<?php echo $image['sizes']['image_banner']?>" />
+    <img src="<?php echo $image['sizes']['image_banner']?>" alt="<?php echo $alt ?>" />
+    <img class="weave" src="<?php echo get_template_directory_uri() ?>/assets/img/basket-weave.png" alt="basket weave">
   </figure>
 </div>

@@ -25,7 +25,6 @@ Project.sliderInit = function () {
         items: 3
       },
       "1580": {
-        edgePadding: 0,
        items: 3
      }
     }
