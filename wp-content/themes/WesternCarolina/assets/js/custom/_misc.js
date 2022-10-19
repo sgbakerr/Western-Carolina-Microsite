@@ -9,12 +9,10 @@ Project.miscScripts = function () {
       if (styles[i].href.indexOf('https://slate-technolutions-net.cdn.technolutions.net') > -1) {
         $(styles[i]).remove()
       }
-
-
-
     }
-
   });
+
+
 
 
 };
