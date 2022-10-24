@@ -11,7 +11,7 @@ Project.sliderInit = function () {
     slideBy: 1,
     mouseDrag: true,
     autoplay: false,
-    
+
     // gutter: 30,
     // center: true,
     responsive: {
@@ -21,12 +21,12 @@ Project.sliderInit = function () {
         items: 2
       },
       "1024": {
-         edgePadding: 80,
+        edgePadding: 80,
         items: 3
       },
       "1580": {
-       items: 3
-     }
+        items: 3
+      }
     }
   });
 
@@ -39,40 +39,34 @@ Project.sliderInit = function () {
 
   function showModal() {
 
-    $('.modal .close').on('click', function(){
+    $('.modal .close').on('click', function () {
       $(this).parent('.modal').removeClass('active')
-      // $(this).siblings('video')[0].stop();
-      // console.log();
-      var vid = $(this).siblings('video')[0];
-      vid.pause();
+      $(this).siblings('.video-wrap').find('video')[0].pause();
+
+
     });
 
-    $('.slide.center .play').on('click', function(){
-     $(`#${ $(this).parent('.slide').attr('data-modal')}`).addClass('active')
+    $('.slide.center .play').on('click', function () {
+      $(`#${$(this).parent('.slide').attr('data-modal')}`).addClass('active')
     });
-    
-    $('.modal-show').on('click', function() {
-      $(`#${ $(this).attr('data-modal')}`).addClass('active')
-      
-      var vid = $(`#${ $(this).attr('data-modal')}`).find('video');
+
+    $('.modal-show').on('click', function () {
+      $(`#${$(this).attr('data-modal')}`).addClass('active')
+      var vid = $(`#${$(this).attr('data-modal')}`).find('video');
       vid[0].play();
-      
-     });
-
-  
+    });
   }
-
   showModal();
 
-  $(window).on('load resize', function() {
+  $(window).on('load resize', function () {
     slideHeight = $('.slide.center').innerHeight();
     $('.slider').css({
       minHeight: slideHeight
     })
   });
 
-  slider.events.on("transitionStart", function(info) {
-      
+  slider.events.on("transitionStart", function (info) {
+
     info.slideItems[info.indexCached].classList.remove('center');
     info.slideItems[info.index].classList.add('center');
 
@@ -80,16 +74,16 @@ Project.sliderInit = function () {
 
   });
 
-  $('.previous-button').on('click', function(){
+  $('.previous-button').on('click', function () {
     slider.goTo('prev');
   });
 
-  $('.next-button').on('click', function(){
+  $('.next-button').on('click', function () {
     slider.goTo('next');
 
-    
+
   });
 
-// info.slideItems[indexPrev].classList.remove('active');
-// info.slideItems[indexCurrent].classList.add('active');
+  // info.slideItems[indexPrev].classList.remove('active');
+  // info.slideItems[indexCurrent].classList.add('active');
 }
