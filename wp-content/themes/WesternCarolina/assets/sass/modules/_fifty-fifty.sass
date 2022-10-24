@@ -1,17 +1,13 @@
 .fifty-blocks
-  background-image: url('../img/fifty-texture.jpg')
-  background-size: 100%
   background-repeat: repeat-y
   .block
-    padding-top: 60px
-    padding-bottom: 60px
     position: relative
+    max-width: 1820px
+    margin: 0 auto
     > div
-      padding: 30px
       .eyebrow
         font-size: 1.8rem
         text-transform: uppercase
-        // font-family: 
         color: $secondary
         letter-spacing: 1px
       .button
@@ -20,11 +16,15 @@
     figure
       img
         width: 100%
+      @supports(object-fit: cover)
+      img
+        height: 100%
+        object-fit: cover
     @include media-breakpoint-up(lg)
       display: grid
-      grid-template-columns: repeat(12, 1fr)
-      gap: 30px
-      align-items: center
+      grid-template-columns: repeat(2, 1fr)
+      gap: 0
+      align-items: stretch
       &:last-child
         &::after
           content: none
@@ -37,19 +37,33 @@
         margin: 0 auto
         height: 1px
         bottom: 0
-        border-bottom: solid 1px $secondary
-    @include make-container
+    &.even
+      > div
+        background-color: $primary
+    &.odd
+      > div
+        background-image: url('../img/fifty-texture.jpg')
+        background-size: cover
+        .card
+          background: none
     @include media-breakpoint-up(lg)
-      padding-top: 80px
-      padding-bottom: 80px
+      > div
+        display: flex
+        align-items: center
+        .card
+          padding: 120px
       &.even
         > figure
           grid-row: 1
-          grid-column: 7 / span 6
+          grid-column: 2
         > div
           grid-row: 1
-          grid-column: 2 / span 4
+          grid-column: 1
       > figure
-        grid-column: 1/ span 6
+        grid-column: 1
       > div
-        grid-column: 8 / span 4
+        grid-column: 2
+    @include media-breakpoint-up(xl)
+      > div
+        .card
+          padding: 120px 160px

@@ -10,8 +10,10 @@ foreach($blocks as $block) :
   
   if($count % 2 === 0) {
     $class = 'even';
+    $color = 'purple';
   } else {
     $class = 'odd';
+    $color = '';
 } ?>
 
 <div class="block <?php echo $class ?>">
@@ -20,6 +22,7 @@ foreach($blocks as $block) :
     <img src="<?php echo $block['image']['sizes']['fifty'] ?>" />
   </figure>
   <div>
+    <div class="card no-shadow <?php echo $color; ?>">
     <?php if( $block['eyebrow_text']) : ?>
       <h4 class="eyebrow sans-serif"><?php echo $block['eyebrow_text'] ?></h4>
     <?php endif; ?>
@@ -33,7 +36,7 @@ foreach($blocks as $block) :
     <?php  if(($block['button'])){ ?> 
     <a class="button " href="<?php echo $block['button']['url'] ?>"><?php echo  $block['button']['title'] ?></a>
     <?php }?>
-    
+    </div>  
   </div> 
 
 </div><?php

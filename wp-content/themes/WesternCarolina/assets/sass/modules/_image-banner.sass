@@ -1,61 +1,72 @@
 .image-banner
   position: relative
   display: grid
-
-  max-width: 1720px
-  margin: 0 auto
-  @include media-breakpoint-up(lg)
-    gap: 20px
-
-  .pattern
-
-    grid-column: 1 / span 12
-    bottom: 0
-    grid-row: 1
-    display: flex
-    align-items: flex-end
-    img
-      width: 100%
+  max-width: 1820px
+  overflow: hidden
+  margin: 0 auto 30px
   @include media-breakpoint-up(lg)
     grid-template-columns: repeat(12, 1fr)
-  .card-row
-    grid-row: 2
-    z-index: 2
-    max-width: 1440px
-    margin: 0 auto
-    @include media-breakpoint-up(lg)
-      grid-column: 1 / span 12
-      grid-row: 1
-      z-index: 3
-      display: grid
-      z-index: 11
-      grid-template-columns: repeat(12, 1fr)
-      align-items: start
-      .card
-        grid-column: 7 / span 5
-        margin-top: 160px
-    @include media-breakpoint-up(xl)
-      .card
-        grid-column: 8 / span 4
-        margin-top: 220px
+  &.side
+    gap: 30px
+    .card-row
+      background: $primary
+      background-image: url(../img/slider-bg.jpg)
+      background-size: cover
+      @include media-breakpoint-up(lg)
+        grid-column: 8 / span 5
+        display: flex
+        align-items: center
+        .card
+          background: none
+          @include prefixer('box-shadow', 'none')
+          padding: 100px
 
+    figure.image
+
+      @include media-breakpoint-up(lg)
+        grid-column: 1 / span 7
+        grid-row: 1
+        min-height: 620px
+        @supports(object-fit: cover)
+          img
+            height: 100%
+            object-fit: cover
+
+  &.over_image
+    .card-row
+      grid-row: 2
+      z-index: 2
+      max-width: 1440px
+      margin: 0 auto
+      @include media-breakpoint-up(lg)
+        grid-column: 1 / span 12
+        grid-row: 1
+        z-index: 3
+        display: grid
+        z-index: 11
+        grid-template-columns: repeat(12, 1fr)
+        align-items: start
+        .card
+          grid-column: 1 / span 5
+          margin-top: 160px
+      @include media-breakpoint-up(xl)
+        .card
+          grid-column: 1 / span 4
+          margin-top: 220px
     // position: absolute
-  .image
-    gap: 10px
-    column-gap: 20px
-    overflow: hidden
-    position: relative
-    .weave
-      bottom: 0
-      position: absolute
-      z-index: 8
-      left: 0
-      bottom: 0
-
-    img
-      width: 100%
-
+    .image
+      gap: 10px
+      column-gap: 20px
+      overflow: hidden
+      position: relative
+      @supports(object-fit: cover)
+        img
+          height: 100%
+          object-fit: cover
+      img
+        width: 100%
+      @include media-breakpoint-up(lg)
+        grid-row: 1
+        grid-column: 1 / span 12
     @include media-breakpoint-up(lg)
-
-      grid-row: 1
-      grid-column: 1 / span 12
+      gap: 20px
