@@ -12,8 +12,6 @@ Project.sliderInit = function () {
     mouseDrag: true,
     autoplay: false,
 
-    // gutter: 30,
-    // center: true,
     responsive: {
       "768": {
         center: true,
@@ -22,19 +20,18 @@ Project.sliderInit = function () {
       },
       "1024": {
         edgePadding: 80,
-        items: 3
+        items: 3,
+        center: true,
       },
       "1580": {
-        items: 3
+        items: 3,
+        center: true,
       }
     }
   });
 
 
 
-  sliderInfo = slider.getInfo();
-
-  sliderInfo.slideItems[sliderInfo.index].classList.add('center')
 
 
   function showModal() {
@@ -42,12 +39,6 @@ Project.sliderInit = function () {
     $('.modal .close').on('click', function () {
       $(this).parent('.modal').removeClass('active')
       $(this).siblings('.video-wrap').find('video')[0].pause();
-
-
-    });
-
-    $('.slide.center .play').on('click', function () {
-      $(`#${$(this).parent('.slide').attr('data-modal')}`).addClass('active')
     });
 
     $('.modal-show').on('click', function () {
@@ -65,15 +56,59 @@ Project.sliderInit = function () {
     })
   });
 
-  slider.events.on("transitionStart", function (info) {
 
-    info.slideItems[info.indexCached].classList.remove('center');
-    info.slideItems[info.index].classList.add('center');
 
-    showModal();
+
+  sliderInfo = slider.getInfo();
+  var slides = sliderInfo.slideItems;
+  $(slides[sliderInfo.index]).addClass('center')
+
+  var slideWidth = [];
+
+  for (var i = 0; i < slides.length; i++) {
+    if (!$(slides[i]).hasClass('center')) {
+      // console.log()
+      slideWidth.push($(slides[i]).innerWidth())
+    }
+  }
+
+  $(slides[sliderInfo.index]).css({ width: slideWidth[0] * 1.2 })
+
+
+
+
+  slider.events.on('indexChanged', function (e) {
+    var slides = e.slideItems;
+
+
+
+
+    $(slides[e.index]).addClass('center')
+    $(slides[e.indexCached]).removeClass('center')
+
+
+    $(slides[e.index]).css({ width: slideWidth[0] * 1.2 })
+    $(slides[e.indexCached]).attr('style', '')
+
+    $(slides[e.indexCached]).find('video').removeClass('show')
+    $(slides[e.indexCached]).find('video')[0].pause()
+    $(slides[e.indexCached]).find('img').removeClass('hide')
 
   });
 
+
+  $('.slide.center .play').on('click', function () {
+    console.log($(this))
+
+    $(this).siblings('video')[0].play()
+    $(this).siblings('img').addClass('hide')
+    var vid = $(this).siblings('video')
+    vid.addClass('show')
+
+    $(this).fadeOut()
+  });
+
+  
   $('.previous-button').on('click', function () {
     slider.goTo('prev');
   });

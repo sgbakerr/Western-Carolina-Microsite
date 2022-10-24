@@ -1,11 +1,11 @@
 .slider-wrap
   position: relative
   background-image: url('../img/slider-bg.jpg')
-  background-size: 800px
+  background-size: cover
   margin-top: 20px
   padding-top: 80px
   padding-bottom: 120px
-  max-width: 1820px
+  max-width: 1720px
   margin: 0 auto
 
   &::after
@@ -58,11 +58,22 @@
     opacity: .25
     padding: 0 15px
     position: relative
+    img.hide
+      opacity: 0
+    video
+      // display: none
+      opacity: 0
+      left: 0
+      position: absolute
+      top: 0
+      z-index: 9
+      &.show
+        opacity: 1
+
     .play
       opacity: 0
     &.center
       opacity: 1
-      width: calc(7%) !important
       @include prefixer('transition', 'ease all .25s')
       position: relative
       .play
@@ -87,5 +98,5 @@
           opacity: .8
         @include prefixer('transition', 'ease all .25s')
 
-    img
+    img, video
       width: 100%

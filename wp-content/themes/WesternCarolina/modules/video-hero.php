@@ -10,7 +10,7 @@ $video = $field['video_hero']['video_link'];
 ?>
 <div class="video-hero">
   <div class="video-embed">
-    <video class="" autoplay="true" muted>
+    <video autoplay="true" muted>
       <?php foreach ($video as $vid) :  ?>
       <source src="<?php echo $vid['video_url'] ?>" type="video/<?php echo $vid['file_type'] ?>" ?>
       <?php endforeach;  ?>

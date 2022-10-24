@@ -26,6 +26,12 @@ $slides = $field['testimonial_slides'];
     <div class="slide" data-modal="modal-<?php echo $count ?>">
       <button class="play">Play</button>
       <img src="<?php echo $slide['image']['sizes']['slide_image'] ?>">
+      <video controls>
+      <?php foreach($slide['video_urls'] as $vid) : ?>
+      <source src="<?php echo $vid['url'] ?>" type="video/<?php echo $vid['file_type'] ?>">
+      <?php
+      endforeach;?>
+    </video>
     </div>
     <?php
     $count++;
@@ -39,22 +45,3 @@ $slides = $field['testimonial_slides'];
     </svg>
   </button>
 </div>
-
-
-<?php
-  $count = 0;
-  foreach($slides as $modal) : ?>
-<div class="modal" id="modal-<?php echo $count ?>">
-  <button class="close">Close</button>
-  <div class="video-wrap">
-    <video controls>
-      <?php foreach($modal['video_urls'] as $vid) : ?>
-      <source src="<?php echo $vid['url'] ?>" type="video/<?php echo $vid['file_type'] ?>">
-      <?php
-      endforeach;?>
-    </video>
-  </div>
-</div>
-<?php
-    $count++;
-  endforeach; ?>
