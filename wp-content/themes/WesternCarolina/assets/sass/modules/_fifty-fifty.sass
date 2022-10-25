@@ -1,6 +1,6 @@
 .fifty-blocks
   background-repeat: repeat-y
-
+  background-image: url('../img/fifty-texture.jpg')
   .block
     position: relative
     max-width: 1720px
@@ -49,10 +49,10 @@
         background-color: $primary
     &.odd
       > div
-        background-image: url('../img/fifty-texture.jpg')
+        
         background-size: cover
         .card
-          background: none
+          background: transparent
     @include media-breakpoint-up(lg)
       > div
         display: flex
