@@ -24,7 +24,7 @@ Project.sliderInit = function () {
         center: true,
       },
       "1580": {
-        items: 3,
+        items: 4,
         center: true,
       }
     }
@@ -72,7 +72,7 @@ Project.sliderInit = function () {
     }
   }
 
-  $(slides[sliderInfo.index]).css({ width: slideWidth[0] * 1.2 })
+  $(slides[sliderInfo.index]).css({ width: slideWidth[0] * 1.15 })
 
 
 
@@ -87,7 +87,7 @@ Project.sliderInit = function () {
     $(slides[e.indexCached]).removeClass('center')
 
 
-    $(slides[e.index]).css({ width: slideWidth[0] * 1.2 })
+    $(slides[e.index]).css({ width: slideWidth[0] * 1.15})
     $(slides[e.indexCached]).attr('style', '')
 
     $(slides[e.indexCached]).find('video').removeClass('show')
