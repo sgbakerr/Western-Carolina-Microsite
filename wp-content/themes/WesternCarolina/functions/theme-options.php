@@ -224,8 +224,6 @@ add_filter('wpseo_metabox_prio', function () {return 'low';});
 add_filter('appip_metabox_priority_filter', function () {return 'low';});
 
 
-show_admin_bar(false);
-
 
 if( function_exists('acf_add_options_page') ) {
 	
