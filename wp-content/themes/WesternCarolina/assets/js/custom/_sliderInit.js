@@ -7,7 +7,7 @@ Project.sliderInit = function () {
     items: 1,
     controls: false,
     nav: false,
-    edgePadding: 60,
+    edgePadding: 0,
     slideBy: 1,
     mouseDrag: true,
     autoplay: false,
@@ -15,16 +15,16 @@ Project.sliderInit = function () {
     responsive: {
       "768": {
         center: true,
-        edgePadding: 80,
+
         items: 2
       },
       "1024": {
-        edgePadding: 80,
-        items: 3,
+
+        items: 4,
         center: true,
       },
       "1580": {
-        items: 4,
+        items: 3,
         center: true,
       }
     }
