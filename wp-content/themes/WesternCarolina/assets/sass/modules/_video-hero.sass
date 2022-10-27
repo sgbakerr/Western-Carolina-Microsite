@@ -5,6 +5,15 @@
   grid-template-columns: 1fr
   
   margin: 0 auto
+  video
+    opacity: 0
+  &.fadeIn
+    &::after
+      background: linear-gradient(0deg, rgba(0,0,0,.8) 20%, rgba(0,0,0,.2) 80%)
+      @include prefixer('transition', 'ease all 1s')
+      opacity: .7
+    video
+      opacity: 1
   &::after
     content: ""
     height: 100%
@@ -13,7 +22,9 @@
     top: 0
     left: 0
     z-index: 0
-    background: linear-gradient(0deg, rgba(0,0,0,.8) 20%, rgba(0,0,0,.2) 100%)
+    background: #000
+    @include prefixer('transition', 'ease all 1s')
+    
   .container
     grid-row: 1
     grid-column: 1
@@ -63,6 +74,8 @@
       left: -100vw
       top: 0
       right: 0
+
+      @include prefixer('transition', 'ease all .25s')
       @include media-breakpoint-up(sm)
         left: -60vw
       @include media-breakpoint-up(md)

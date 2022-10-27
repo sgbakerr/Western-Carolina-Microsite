@@ -1,8 +1,9 @@
 Project.sliderInit = function () {
 
-  // $(window).on('', function (e) { 
-  //   console.log(e)
-  //  });
+
+  $(window).on('load', function() {
+    $('.video-hero').addClass('fadeIn')
+  });
   
   $(window).keyup(function(e){
     // console.log()
