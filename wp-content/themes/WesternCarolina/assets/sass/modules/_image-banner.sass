@@ -1,7 +1,6 @@
 .image-banner
   position: relative
   display: grid
-  max-width: 1720px
   overflow: hidden
   margin: 0 auto 30px
   @include media-breakpoint-up(lg)
@@ -19,18 +18,24 @@
         .card
           background: none
           @include prefixer('box-shadow', 'none')
-          padding: 100px
+          @include media-breakpoint-up(lg)
+            padding: 40px
+          @include media-breakpoint-up(xl)
+            padding: 100px
 
     figure.image
 
+     
       @include media-breakpoint-up(lg)
         grid-column: 1 / span 7
         grid-row: 1
-        min-height: 620px
+        min-height: 480px
         @supports(object-fit: cover)
           img
             height: 100%
             object-fit: cover
+      @include media-breakpoint-up(xl)
+        min-height: 620px
 
   &.over_image
     .card-row

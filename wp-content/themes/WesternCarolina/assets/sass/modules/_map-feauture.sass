@@ -6,6 +6,7 @@
   background-size: 100%
   padding-bottom: 30px
   padding-top: 30px
+ 
   @include media-breakpoint-up(lg)
     background-size: 800px
     padding-bottom: 0
@@ -13,14 +14,19 @@
     padding: 0
     figure
       overflow: hidden
-      margin-bottom: -60px
+      margin-bottom: -80px
       @include media-breakpoint-up(lg)
         margin-bottom: 0
       img
-        width: 145vw
+        width: 125vw
         position: relative
-        left: -30vw
         max-width: none
+        left: -15vw
+        @include media-breakpoint-up(lg)
+          width: 145vw
+          
+          left: -30vw
+         
         // position: absolute
     @include media-breakpoint-up(lg)
       padding: 0 30px
@@ -32,7 +38,13 @@
         padding: 0
       > h2
         color: $type_color
-        // font-size: 5rem
+        
+        @include media-breakpoint-up(md)
+          font-size: 8rem
+         
+        @include media-breakpoint-up(lg)
+          max-width: 100%
+          font-size: 5rem
         margin-bottom: 30px
         &::after
           content: ""
@@ -42,35 +54,36 @@
           background: $tertiary
           margin-top: 30px
       .stats
-        display: flex
         margin: 40px 0
-        // gap: 30px
-        flex-wrap: wrap
+        
+        @include media-breakpoint-up(sm)
+          display: flex
         @include media-breakpoint-up(lg)
-          margin: 60px 0 40px 
-       
+          margin: 60px 0 40px
         .stat
           position: relative
-          padding: 0 20px
-          flex: 0 0 33.3334%
-          @include media-breakpoint-up(lg)
-            padding: 0 30px
-
-          &:first-child
-            padding-left: 0
-          &:last-child
-            padding-right: 0
+          padding: 10px 0
+          // flex: 0 0 33.3334%
+          border-bottom: solid 1px  #E5E0D6
+          @include media-breakpoint-up(sm)
+            border: none
+            padding: 0 30px 0
+          
+            &:first-child
+              padding-left: 0
+            &:last-child
+              padding-right: 0
+              &::after
+                content: none
             &::after
-              content: none
-          &::after
-            content: ""
-            display: block
-            width: 1px
-            height: 100%
-            position: absolute
-            top: 0
-            right: 0
-            background: #E5E0D6
+              content: ""
+              display: block
+              width: 1px
+              height: 100%
+              position: absolute
+              top: 0
+              right: 0
+              background: #E5E0D6
           @include media-breakpoint-up(lg)
             position: relative
           h4
@@ -82,8 +95,12 @@
             color: $primary
             margin-bottom: 10px
             line-height: 1
-            font-size: 3rem
+
+            @include media-breakpoint-up(md)
+              font-size: 6rem
             @include media-breakpoint-up(lg)
+              font-size: 3.5rem
+            @include media-breakpoint-up(xl)
               font-size: 5rem
     @include media-breakpoint-up(lg)
       padding-left: 0

@@ -21,6 +21,7 @@ add_theme_support('post-thumbnails');
 add_image_size('collage_full', 1500, 500, array('center', 'center'));
 add_image_size('fifty', 615, 400, array('center', 'center'));
 add_image_size('image_banner', 1500,800, array('center', 'center'));
+add_image_size('image_grid', 800,800, array('center', 'center'));
 add_image_size('form_banner', 1440,920, array('center', 'center'));
 add_image_size('collage_med', 920, 460, array('center', 'center'));
 add_image_size('collage_sm', 495, 460, array('center', 'center'));
