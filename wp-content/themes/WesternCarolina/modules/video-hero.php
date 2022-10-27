@@ -12,7 +12,7 @@ $video_modal = $field['video_hero']['video_link_modal'];
 ?>
 <div class="video-hero">
   <div class="video-embed">
-    <video autoplay="true" muted  preload="auto">
+    <video autoplay="true" muted  preload="auto" loop>
       <?php foreach ($video as $vid) :  ?>
       <source src="<?php echo $vid['video_url'] ?>" type="video/<?php echo $vid['file_type'] ?>" ?>
       <?php endforeach;  ?>
