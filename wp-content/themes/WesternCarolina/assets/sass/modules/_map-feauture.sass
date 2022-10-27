@@ -6,7 +6,9 @@
   background-size: 100%
   padding-bottom: 30px
   padding-top: 30px
- 
+  max-width: 1840px
+  margin: 0 auto
+
   @include media-breakpoint-up(lg)
     background-size: 800px
     padding-bottom: 0
@@ -24,9 +26,9 @@
         left: -15vw
         @include media-breakpoint-up(lg)
           width: 145vw
-          
+
           left: -30vw
-         
+
         // position: absolute
     @include media-breakpoint-up(lg)
       padding: 0 30px
@@ -38,10 +40,10 @@
         padding: 0
       > h2
         color: $type_color
-        
+
         @include media-breakpoint-up(md)
           font-size: 8rem
-         
+
         @include media-breakpoint-up(lg)
           max-width: 100%
           font-size: 5rem
@@ -55,7 +57,7 @@
           margin-top: 30px
       .stats
         margin: 40px 0
-        
+
         @include media-breakpoint-up(sm)
           display: flex
         @include media-breakpoint-up(lg)
@@ -64,11 +66,11 @@
           position: relative
           padding: 10px 0
           // flex: 0 0 33.3334%
-          border-bottom: solid 1px  #E5E0D6
+          border-bottom: solid 1px #E5E0D6
           @include media-breakpoint-up(sm)
             border: none
             padding: 0 30px 0
-          
+
             &:first-child
               padding-left: 0
             &:last-child
