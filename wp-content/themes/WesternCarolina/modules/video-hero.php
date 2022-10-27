@@ -7,6 +7,7 @@ $header = $field['video_hero']['header'];
 $copy = $field['video_hero']['copy'];
 $link = $field['video_hero']['link'];
 $video = $field['video_hero']['video_link'];
+$video_modal = $field['video_hero']['video_link_modal'];
 ?>
 <div class="video-hero">
   <div class="video-embed">
@@ -37,8 +38,8 @@ $video = $field['video_hero']['video_link'];
   <button class="close">Close</button>
   <div class="video-wrap">
   <video controls>
-    <?php foreach($video as $vid) : ?>
-    <source src="<?php echo $vid['video_url'] ?>" type="video/<?php echo $vid['file_type'] ?>">
+    <?php foreach($video_modal as $modal_vid) : ?>
+    <source src="<?php echo $modal_vid['video_url'] ?>" type="video/<?php echo $modal_vid['file_type'] ?>">
     <?php
       endforeach;?>
   </video>
