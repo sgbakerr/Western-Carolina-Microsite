@@ -8,6 +8,7 @@ $copy = $field['video_hero']['copy'];
 $link = $field['video_hero']['link'];
 $video = $field['video_hero']['video_link'];
 $video_modal = $field['video_hero']['video_link_modal'];
+
 ?>
 <div class="video-hero">
   <div class="video-embed">
@@ -25,26 +26,23 @@ $video_modal = $field['video_hero']['video_link_modal'];
       <?php if($copy) { ?>
       <p class="serif"><?php echo $copy ?></p>
       <?php } ?>
-      <?php if($link) { ?>
+      <?php if($link && $video_modal) { ?>
       <button data-modal="video-hero-modal-<?php echo $module_id ?>"
         class="modal-show button secondary"><?php echo $link ?></button>
-
       <?php } ?>
     </div>
   </div>
 </div>
-
+<?php if($video_modal ) { ?>
 <div class="modal" id="video-hero-modal-<?php echo $module_id ?>">
-  <button class="close">Close</button>
-  <div class="video-wrap">
+<button class="close">Close</button>
+<div class="video-wrap">
   <video controls>
     <?php foreach($video_modal as $modal_vid) : ?>
     <source src="<?php echo $modal_vid['video_url'] ?>" type="video/<?php echo $modal_vid['file_type'] ?>">
     <?php
       endforeach;?>
   </video>
- 
-  </div>
-        
-      
 </div>
+</div><?php  
+}?>
