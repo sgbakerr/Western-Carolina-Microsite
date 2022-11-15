@@ -6,9 +6,10 @@
  * @since 2.0
  **/
 
-// $ = jQuery;
+$ = jQuery;
 
 // Variables
 var mobileNav = new Project.mobileNav();
 var sliderInit = new Project.sliderInit();
 var misc = new Project.miscScripts();
+// var ig = new Project.igFeed();
